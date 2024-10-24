@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive JavaScript Quiz</title>
+    <link rel="stylesheet" href="stylesheet.css"> 
+</head>
+<body>
+    <div class="quiz-container">
+        <!-- Fake Authentication Section -->
+        <div id="auth-section">
+            <h2>Login to Start the Quiz</h2>
+            <label for="Username">Username: </label>
+            <input type="text" id="Username" name="Username" required>
+            <label for="Password">Password: </label>
+            <input type="Password" id="Password" name="Password" required>
+            <button onclick="authenticate()">Login</button>
+        </div>
+
+        <!-- Quiz Section (Hidden until authentication) -->
+        <div id="quiz-section" style="display:none;">
+            <h1>JavaScript Quiz</h1>
+            <form id="quiz-form">
+                <!-- Questions will be dynamically inserted using JavaScript -->
+            </form>
+
+            <!-- Submit button -->
+            <button id="submit-btn" style="display:none;" type="button" onclick="checkAnswers()">Submit Quiz</button>
+
+            <!-- Quiz Feedback -->
+            <div id="quiz-feedback" style="display:none;">
+                <h2>Your Score: <span id="score"></span></h2>
+                <button onclick="restartQuiz()">Try Again</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>
